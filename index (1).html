@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Health Nursing Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .quiz-container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #0056b3;
+        }
+        h2 {
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 5px;
+            margin-top: 30px;
+            color: #333;
+        }
+        .intro-message {
+            text-align: center;
+            font-size: 1.5em;
+            margin: 20px 0;
+            padding: 15px;
+            border: 2px dashed #dc3545;
+            background-color: #fff0f3;
+            color: #dc3545;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        .question-block {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fafafa;
+        }
+        .question-block p {
+            font-weight: bold;
+            margin-top: 0;
+            color: #555;
+        }
+        .options label {
+            display: block;
+            margin-bottom: 8px;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 4px;
+        }
+        .options label:hover {
+            background-color: #e9e9e9;
+        }
+        input[type="text"] {
+            width: 80%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin-top: 30px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #results {
+            margin-top: 25px;
+            padding: 20px;
+            border: 2px solid #28a745;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #155724;
+            background-color: #d4edda;
+            display: none;
+        }
+        .correct { color: #28a745; font-weight: bold; }
+        .incorrect { color: #dc3545; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container">
+    <h1>Community Health Nursing Comprehensive Quiz</h1>
+    <p>Total of 50 Questions (10 True/False, 20 Identification, 20 Multiple Choice)</p>
+    
+    <div class="intro-message">
+        eto na ang quiz na pinapagawa mo goodluck pinahirapan ko pa naman NYEHHEHEHEHEHEEHEHEH
+    </div>
+    <form id="quizForm">
+
+        <h2>I. True or False (10 Items)</h2>
+
+        <div class="question-block" data-question-type="tf" data-answer="True">
+            <p>1. The **Axis Knee System** is a knee system designed in the ASEAN region.</p>
+            <div class="options">
+                <label><input type="radio" name="tf1" value="True"> True</label>
+                <label><input type="radio" name="tf1" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-question-type="tf" data-answer="True">
+            <p>2. The **Magna Carta of Public Health Workers** (RA 7305) aims, in part, to promote and improve the social and economic well-being of health workers.</p>
+            <div class="options">
+                <label><input type="radio" name="tf2" value="True"> True</label>
+                <label><input type="radio" name="tf2" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-question-type="tf" data-answer="False">
+            <p>3. **Affectual solidarity** refers to the strength of obligation felt towards other family members.</p>
+            <div class="options">
+                <label><input type="radio" name="tf3" value="True"> True</label>
+                <label><input type="radio" name="tf3" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-question-type="tf" data-answer="True">
+            <p>4. The **Philippine Clean Air Act of 1999** is known as Republic Act No. 8749.</p>
+            <div class="options">
+                <label><input type="radio" name="tf4" value="True"> True</label>
+                <label><input type="radio" name="tf4" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-question-type="tf" data-answer="True">
+            <p>5. The State shall provide **free medical care to paupers** according to the principles of the **National Health Insurance Act of 2013** (RA 10606).</p>
+            <div class="options">
+                <label><input type="radio" name="tf5" value="True"> True</label>
+                <label><input type="radio" name="tf5" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-question-type="tf" data-answer="False">
+            <p>6. **Biotek-M** is a confirmatory test primarily used for Malaria diagnosis.</p>
+            <div class="options">
+                <label><input type="radio" name="tf6" value="True"> True</label>
+                <label><input type="radio" name="tf6" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-question-type="tf" data-answer="False">
+            <p>7. The total out-of-pocket (OOP) expenses for healthcare in 2018 accounted for less than half (below 50%) of the total health expenditures (THE).</p>
+            <div class="options">
+                <label><input type="radio" name="tf7" value="True"> True</label>
+                <label><input type="radio" name="tf7" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-question-type="tf" data-answer="False">
+            <p>8. **Infectious waste** is defined as all materials generated as a result of patient diagnosis, treatment, or immunization of human beings or animals.</p>
+            <div class="options">
+                <label><input type="radio" name="tf8" value="True"> True</label>
+                <label><input type="radio" name="tf8" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-question-type="tf" data-answer="False">
+            <p>9. The core value of **Caring** is described as respecting the dignity and moral wholeness of every person without conditions or limitation.</p>
+            <div class="options">
+                <label><input type="radio" name="tf9" value="True"> True</label>
+                <label><input type="radio" name="tf9" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-question-type="tf" data-answer="True">
+            <p>10. **Telemedicine** deals with virtual communication between the patient and the physician.</p>
+            <div class="options">
+                <label><input type="radio" name="tf10" value="True"> True</label>
+                <label><input type="radio" name="tf10" value="False"> False</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <h2>II. Identification (20 Items)</h2>
+
+        <div class="question-block" data-question-type="id">
+            <p>1. What is the device that captures medical signals, stores data in an EMR, and transmits health information via the internet?</p>
+            <input type="text" id="id1" name="id1" placeholder="Answer">
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-question-type="id">
+            <p>2. What Republic Act is known as the "**Magna Carta of Public Health Workers**"?</p>
+            <input type="text" id="id2" name="id2" placeholder="Answer">
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-question-type="id">
+            <p>3. What dimension of family solidarity refers to the frequency of social contact and shared activities between family members?</p>
+            <input type="text" id="id3" name="id3" placeholder="Answer">
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-question-type="id">
+            <p>4. What is the proprietary name given by the manufacturer to distinguish its product from those of competitors?</p>
+            <input type="text" id="id4" name="id4" placeholder="Answer">
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-question-type="id">
+            <p>5. What is the core value of nursing that affirms the uniqueness of and differences among persons, ideas, values, and ethnicities?</p>
+            <input type="text" id="id5" name="id5" placeholder="Answer">
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-question-type="id">
+            <p>6. What Republic Act is known as the "**Philippine Clean Air Act of 1999**"?</p>
+            <input type="text" id="id6" name="id6" placeholder="Answer">
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-question-type="id">
+            <p>7. What is the term for organic compounds that persist in the environment, bioaccumulate, and pose a risk to human health (POPs)?</p>
+            <input type="text" id="id7" name="id7" placeholder="Answer">
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-question-type="id">
+            <p>8. What is the traditional dress worn by Filipino women, named after a famous character in the epic 19th-century narrative, "Noli..."?</p>
+            <input type="text" id="id8" name="id8" placeholder="Answer">
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-question-type="id">
+            <p>9. What term refers to the strength of obligation felt towards other family members, promoting a belief in family cohesion and assistance?</p>
+            <input type="text" id="id9" name="id9" placeholder="Answer">
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-question-type="id">
+            <p>10. What is the term for any alteration of the physical, chemical, and biological properties of the atmospheric air that is likely to be detrimental to public health?</p>
+            <input type="text" id="id10" name="id10" placeholder="Answer">
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-question-type="id">
+            <p>11. What type of health-related entrepreneurial activity offers alcohol and drug treatments and professional help from therapists and medical experts?</p>
+            <input type="text" id="id11" name="id11" placeholder="Answer">
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-question-type="id">
+            <p>12. What Republic Act is known as the "**Generics Act of 1988**"?</p>
+            <input type="text" id="id12" name="id12" placeholder="Answer">
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-question-type="id">
+            <p>13. What is the name of the chemical component responsible for the claimed therapeutic effect of a pharmaceutical product?</p>
+            <input type="text" id="id13" name="id13" placeholder="Answer">
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-question-type="id">
+            <p>14. What is the traditional Filipino value system of debt of gratitude, often imparting a sense of duty to repay favors done by elders?</p>
+            <input type="text" id="id14" name="id14" placeholder="Answer">
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-question-type="id">
+            <p>15. What is the term for a device or apparatus used to prevent, control, or abate the pollution of air caused by emissions?</p>
+            <input type="text" id="id15" name="id15" placeholder="Answer">
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-question-type="id">
+            <p>16. What Act provides for a comprehensive socialized health insurance program for all Filipinos?</p>
+            <input type="text" id="id16" name="id16" placeholder="Answer">
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-question-type="id">
+            <p>17. What general term refers to the application of traditional knowledge, skills, and practice of alternative healing methods such as reflexology and acupuncture?</p>
+            <input type="text" id="id17" name="id17" placeholder="Answer">
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-question-type="id">
+            <p>18. What dramatic form of faith healing has attracted significant international attention?</p>
+            <input type="text" id="id18" name="id18" placeholder="Answer">
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-question-type="id">
+            <p>19. What are the gases (e.g., carbon dioxide, methane) that can potentially or reasonably be expected to induce global warming?</p>
+            <input type="text" id="id19" name="id19" placeholder="Answer">
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-question-type="id">
+            <p>20. What Presidential Decree is known as the "**Code on Sanitation of the Philippines**"?</p>
+            <input type="text" id="id20" name="id20" placeholder="Answer">
+            <div class="feedback"></div>
+        </div>
+
+        <h2>III. Multiple Choice (20 Items)</h2>
+
+        <div class="question-block" data-question-type="mc" data-answer="D">
+            <p>1. Which of the following is NOT listed as a core value of nursing by the National League for Nursing?</p>
+            <div class="options">
+                <label><input type="radio" name="mc1" value="A"> A. Caring</label>
+                <label><input type="radio" name="mc1" value="B"> B. Integrity</label>
+                <label><input type="radio" name="mc1" value="C"> C. Diversity</label>
+                <label><input type="radio" name="mc1" value="D"> D. Spirituality</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-question-type="mc" data-answer="C">
+            <p>2. Which of the following is a dimension of solidarity in Intergenerational Family Relations that refers to the exchanges of practical and financial assistance?</p>
+            <div class="options">
+                <label><input type="radio" name="mc2" value="A"> A. Consensual solidarity</label>
+                <label><input type="radio" name="mc2" value="B"> B. Affectual solidarity</label>
+                <label><input type="radio" name="mc2" value="C"> C. Functional solidarity</label>
+                <label><input type="radio" name="mc2" value="D"> D. Associational solidarity</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-question-type="mc" data-answer="C">
+            <p>3. The *Magna Carta of Public Health Workers* (RA 7305) was approved on:</p>
+            <div class="options">
+                <label><input type="radio" name="mc3" value="A"> A. December 23, 1975</label>
+                <label><input type="radio" name="mc3" value="B"> B. June 23, 1999</label>
+                <label><input type="radio" name="mc3" value="C"> C. March 26, 1992</label>
+                <label><input type="radio" name="mc3" value="D"> D. September 13, 1988</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-question-type="mc" data-answer="C">
+            <p>4. The **Axis Knee System** is noted to be cheaper than other brands by approximately how much?</p>
+            <div class="options">
+                <label><input type="radio" name="mc4" value="A"> A. 10-20 percent</label>
+                <label><input type="radio" name="mc4" value="B"> B. 20-30 percent</label>
+                <label><input type="radio" name="mc4" value="C"> C. 40-50 percent</label>
+                <label><input type="radio" name="mc4" value="D"> D. 60-70 percent</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-question-type="mc" data-answer="B">
+            <p>5. What was the reported total out-of-pocket (OOP) expenses for healthcare in the Philippines for the year 2018?</p>
+            <div class="options">
+                <label><input type="radio" name="mc5" value="A"> A. P766.86 billion</label>
+                <label><input type="radio" name="mc5" value="B"> B. P449.171 billion</label>
+                <label><input type="radio" name="mc5" value="C"> C. P58.6 billion</label>
+                <label><input type="radio" name="mc5" value="D"> D. P19.52 billion</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-question-type="mc" data-answer="D">
+            <p>6. Which type of health-related entrepreneurial activity is described as being beneficial for managing medical conditions and learning new alternatives for health issues?</p>
+            <div class="options">
+                <label><input type="radio" name="mc6" value="A"> A. Diabetic Care Center</label>
+                <label><input type="radio" name="mc6" value="B"> B. Physiotherapy Centers</label>
+                <label><input type="radio" name="mc6" value="C"> C. Home Healthcare Services</label>
+                <label><input type="radio" name="mc6" value="D"> D. Development of a Healthcare App</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-question-type="mc" data-answer="C">
+            <p>7. Which of the following laws mandates the Department of Health to establish and organize a National Blood Transfusion Service Network?</p>
+            <div class="options">
+                <label><input type="radio" name="mc7" value="A"> A. Republic Act No. 7305</label>
+                <label><input type="radio" name="mc7" value="B"> B. Republic Act No. 8749</label>
+                <label><input type="radio" name="mc7" value="C"> C. Republic Act No. 7719</label>
+                <label><input type="radio" name="mc7" value="D"> D. Republic Act No. 10606</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-question-type="mc" data-answer="D">
+            <p>8. Which term, as defined in RA 6675 (Generics Act of 1988), is the identification of drugs and medicines by their scientifically and internationally recognized active ingredients?</p>
+            <div class="options">
+                <label><input type="radio" name="mc8" value="A"> A. Brand Name</label>
+                <label><input type="radio" name="mc8" value="B"> B. Chemical Name</label>
+                <label><input type="radio" name="mc8" value="C"> C. Active Ingredient</label>
+                <label><input type="radio" name="mc8" value="D"> D. Generic Name</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-question-type="mc" data-answer="A">
+            <p>9. The **Code on Sanitation of the Philippines** (PD 856) was approved on:</p>
+            <div class="options">
+                <label><input type="radio" name="mc9" value="A"> A. December 23, 1975</label>
+                <label><input type="radio" name="mc9" value="B"> B. September 13, 1988</label>
+                <label><input type="radio" name="mc9" value="C"> C. March 26, 1992</label>
+                <label><input type="radio" name="mc9" value="D"> D. June 23, 1999</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-question-type="mc" data-answer="D">
+            <p>10. The State policy for the **Philippine Clean Air Act of 1999** (RA 8749) includes the principle that:</p>
+            <div class="options">
+                <label><input type="radio" name="mc10" value="A"> A. Development must be prioritized over environmental protection.</label>
+                <label><input type="radio" name="mc10" value="B"> B. The responsibility of cleaning the environment is primarily national-based.</label>
+                <label><input type="radio" name="mc10" value="C"> C. Pollution control should be the primary focus over prevention.</label>
+                <label><input type="radio" name="mc10" value="D"> D. Polluters must pay.</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-question-type="mc" data-answer="B">
+            <p>11. In the context of **Traditional and Alternative Health Care**, which is one of the listed methods?</p>
+            <div class="options">
+                <label><input type="radio" name="mc11" value="A"> A. Bio-surgery</label>
+                <label><input type="radio" name="mc11" value="B"> B. Acupuncture</label>
+                <label><input type="radio" name="mc11" value="C"> C. Teletherapy</label>
+                <label><input type="radio" name="mc11" value="D"> D. Genetic therapy</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-question-type="mc" data-answer="D">
+            <p>12. Which of the following is defined as the concentration of air over specified periods, intended to serve as goals for the protection of health and public welfare?</p>
+            <div class="options">
+                <label><input type="radio" name="mc12" value="A"> A. Emission</label>
+                <label><input type="radio" name="mc12" value="B"> B. Air pollutant</label>
+                <label><input type="radio" name="mc12" value="C"> C. Ambient air quality</label>
+                <label><input type="radio" name="mc12" value="D"> D. Ambient air quality guideline values</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-question-type="mc" data-answer="D">
+            <p>13. The core of nursing that community health nurses should demonstrate is:</p>
+            <div class="options">
+                <label><input type="radio" name="mc13" value="A"> A. Integrity</label>
+                <label><input type="radio" name="mc13" value="B"> B. Diversity</label>
+                <label><input type="radio" name="mc13" value="C"> C. Excellence</label>
+                <label><input type="radio" name="mc13" value="D"> D. Caring</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-question-type="mc" data-answer="C">
+            <p>14. Which dimension of family solidarity means how factors like geographical distance can constrain or enhance interaction between family members?</p>
+            <div class="options">
+                <label><input type="radio" name="mc14" value="A"> A. Functional solidarity</label>
+                <label><input type="radio" name="mc14" value="B"> B. Consensual solidarity</label>
+                <label><input type="radio" name="mc14" value="C"> C. Structural solidarity</label>
+                <label><input type="radio" name="mc14" value="D"> D. Normative solidarity</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-question-type="mc" data-answer="B">
+            <p>15. According to the **Code on Sanitation of the Philippines** (PD 856), the Department of Health (DOH) has the power to:</p>
+            <div class="options">
+                <label><input type="radio" name="mc15" value="A"> A. Administer the National Blood Transfusion Service.</label>
+                <label><input type="radio" name="mc15" value="B"> B. Issue permits to establish and operate government and private hospitals/clinics.</label>
+                <label><input type="radio" name="mc15" value="C"> C. Implement the National Health Insurance Program.</label>
+                <label><input type="radio" name="mc15" value="D"> D. Enforce a system of accountability for environmental impact.</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-question-type="mc" data-answer="D">
+            <p>16. Which concept in Filipino culture often involves a system of obligation, where there is a sense of duty for younger siblings to repay favors done by their elders?</p>
+            <div class="options">
+                <label><input type="radio" name="mc16" value="A"> A. Bahala Na</label>
+                <label><input type="radio" name="mc16" value="B"> B. Bayanihan</label>
+                <label><input type="radio" name="mc16" value="C"> C. Hiya</label>
+                <label><input type="radio" name="mc16" value="D"> D. Utang na Loob</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-question-type="mc" data-answer="C">
+            <p>17. What type of waste refers to the portion of medical waste that could transmit an infectious disease?</p>
+            <div class="options">
+                <label><input type="radio" name="mc17" value="A"> A. Municipal waste</label>
+                <label><input type="radio" name="mc17" value="B"> B. Hazardous waste</label>
+                <label><input type="radio" name="mc17" value="C"> C. Infectious waste</label>
+                <label><input type="radio" name="mc17" value="D"> D. Persistent Organic Pollutants</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-question-type="mc" data-answer="C">
+            <p>18. Which local Philippine company plans to build 10 new hospitals in the next 5-10 years as part of its interest in the health industry?</p>
+            <div class="options">
+                <label><input type="radio" name="mc18" value="A"> A. Metro Pacific Hospital Holdings</label>
+                <label><input type="radio" name="mc18" value="B"> B. Vitacare</label>
+                <label><input type="radio" name="mc18" value="C"> C. Ayala</label>
+                <label><input type="radio" name="mc18" value="D"> D. The Medical City</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-question-type="mc" data-answer="C">
+            <p>19. What new technology in healthcare involves virtual communication between the patient and physician, enabling doctors to see and treat patients through video conferencing?</p>
+            <div class="options">
+                <label><input type="radio" name="mc19" value="A"> A. Biotek-M</label>
+                <label><input type="radio" name="mc19" value="B"> B. RxBox</label>
+                <label><input type="radio" name="mc19" value="C"> C. Telemedicine</label>
+                <label><input type="radio" name="mc19" value="D"> D. Wearables</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-block" data-question-type="mc" data-answer="C">
+            <p>20. The principle of **Gender Equality** (RA 10354) entails:</p>
+            <div class="options">
+                <label><input type="radio" name="mc20" value="A"> A. Policies that provide preferential treatment and affirmative action for women.</label>
+                <label><input type="radio" name="mc20" value="B"> B. Policies that focus only on women's reproductive health.</label>
+                <label><input type="radio" name="mc20" value="C"> C. Equality in opportunities, allocation of resources, or access to services.</label>
+                <label><input type="radio" name="mc20" value="D"> D. Focusing on women-specific projects to end existing inequalities.</label>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <button type="button" onclick="checkQuiz()">Submit Quiz</button>
+    </form>
+
+    <div id="results"></div>
+
+</div>
+
+<script>
+    // Correct answers for Identification questions (case-insensitive check)
+    const identificationAnswers = {
+        'id1': ['RxBox'],
+        'id2': ['Republic Act 7305', 'RA 7305'],
+        'id3': ['Associational solidarity'],
+        'id4': ['Brand Name'],
+        'id5': ['Diversity'],
+        'id6': ['Republic Act 8749', 'RA 8749'],
+        'id7': ['Persistent Organic Pollutants', 'POPs'],
+        'id8': ['Maria Clara'],
+        'id9': ['Normative solidarity'],
+        'id10': ['Air pollution'],
+        'id11': ['Drug Treatment/Rehabilitation Center', 'Drug Treatment Center', 'Rehabilitation Center'],
+        'id12': ['Republic Act 6675', 'RA 6675'],
+        'id13': ['Active Ingredient'],
+        'id14': ['Utang na Loob'],
+        'id15': ['Pollution control device'],
+        'id16': ['National Health Insurance Act of 2013', 'RA 10606'],
+        'id17': ['Traditional and Alternative Health Care', 'Traditional and Alternative Health Care'],
+        'id18': ['Psychic surgery'],
+        'id19': ['Greenhouse gases'],
+        'id20': ['Presidential Decree No. 856', 'PD 856']
+    };
+
+    function checkQuiz() {
+        let score = 0;
+        const form = document.getElementById('quizForm');
+        const questions = document.querySelectorAll('.question-block');
+
+        questions.forEach((qBlock, index) => {
+            const feedback = qBlock.querySelector('.feedback');
+            feedback.innerHTML = ''; // Clear previous feedback
+            feedback.className = 'feedback'; // Reset class for styling
+            const type = qBlock.getAttribute('data-question-type');
+
+            let isCorrect = false;
+            let correctAnswer = '';
+            let userAnswer = '';
+
+            if (type === 'tf' || type === 'mc') {
+                // Determine the correct name attribute dynamically
+                let namePrefix = (type === 'tf' ? 'tf' : 'mc');
+                let nameIndex = parseInt(qBlock.querySelector('input').name.match(/\d+/)[0]);
+                const selected = form.querySelector(`input[name="${namePrefix}${nameIndex}"]:checked`);
+                correctAnswer = qBlock.getAttribute('data-answer');
+                
+                if (selected) {
+                    userAnswer = selected.value;
+                    if (userAnswer === correctAnswer) {
+                        isCorrect = true;
+                        score++;
+                    }
+                }
+            } else if (type === 'id') {
+                // Identification logic
+                const inputId = qBlock.querySelector('input').id;
+                userAnswer = qBlock.querySelector('input').value.trim();
+                const possibleAnswers = identificationAnswers[inputId];
+                
+                if (possibleAnswers) {
+                    // Check if user answer matches any of the possible correct answers (case-insensitive)
+                    isCorrect = possibleAnswers.some(ans => ans.toLowerCase() === userAnswer.toLowerCase());
+                    correctAnswer = possibleAnswers.join(' / '); // Display all possible answers
+                    if (isCorrect) {
+                        score++;
+                    }
+                }
+            }
+
+            // Display feedback
+            if (isCorrect) {
+                feedback.innerHTML = `<span class="correct">Correct!</span>`;
+            } else {
+                feedback.innerHTML = `<span class="incorrect">Incorrect. The correct answer is: ${correctAnswer}.</span>`;
+            }
+        });
+
+        // Display total results
+        const totalQuestions = 50;
+        const percentage = (score / totalQuestions) * 100;
+        const resultsDiv = document.getElementById('results');
+        resultsDiv.style.display = 'block';
+        resultsDiv.innerHTML = `Your Score: ${score} out of ${totalQuestions} (${percentage.toFixed(2)}%)`;
+    }
+</script>
+
+</body>
+</html>
